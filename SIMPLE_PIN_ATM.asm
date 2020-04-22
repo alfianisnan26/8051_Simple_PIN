@@ -1,4 +1,10 @@
-ORG 0H
+	;Kelompok	: Cherry Trail
+	;Topik		: 15
+	;Kelas		: SBK-01
+	;Anggota	: 
+	;•	Alfian Badrul Isnan	- 1806148643
+	;•	Nadhifa Khalista - 1806148800
+	;•	Natalia Kristian – 1806200103
 	;BUTTON A ENTER
 	;BUTTON B -
 	;BUTTON C CLEAR ALL/CANCEL
@@ -17,6 +23,7 @@ ORG 0H
 	;P2.5
 	;P2.4
 	;	P1.0 - P1.7
+ORG 0H
 	MOV P0, #FBIT ;IINPUT KEYPAD
 	MOV R0, #0 ;COUNTER
 	MOV R1, #10 ;REGISTER TO SAVE LAST DIGIT1
@@ -34,7 +41,6 @@ ORG 0H
 	MOV DPTR, #SEG
 LOOP:	ACALL CHECK
 	SJMP LOOP
-	MOV B, P0
 CHECK:	SETB RS1
 	SETB RS0
 ;;;;;;;;;;;;;;;;;;;;;;;;;
